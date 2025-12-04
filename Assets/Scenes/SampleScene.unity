@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -308,6 +309,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6af1f4addf71e5268f4e3419cddeeea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  target: {fileID: 1474210717}
+  offset: {x: 0, y: 4, z: -11}
+  smoothSpeed: 0.125
 --- !u!1 &1474210713
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,13 +429,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474210713}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.057067193, y: -0.5847666, z: 0.041295685, w: -0.8081374}
-  m_LocalPosition: {x: -1786.9667, y: 0.35333782, z: -6705.5576}
+  m_LocalRotation: {x: 0, y: 0.7786431, z: 0, w: 0.6274672}
+  m_LocalPosition: {x: -1504.6725, y: -53.76613, z: -2926.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 102.273, z: 0}
 --- !u!114 &1474210718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,7 +448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c2eaa7a5d1ba57db2cb96b623707df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
+  moveSpeed: 5
+  rotateSpeed: 100
 --- !u!1 &2022173893
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +557,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1640.8608, y: 0.0002, z: -2893.4277}
-  m_LocalScale: {x: 344.0816, y: 1, z: 762.33777}
+  m_LocalScale: {x: 500, y: 1, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
