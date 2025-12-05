@@ -7,9 +7,11 @@ public class PlayerMovement : MonoBehaviour
     private float gravity = -9.81f;
     private float verticalVelocity = 0f;
     private CharacterController controller;
+    private Animator animator;
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -28,7 +30,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         moveDirection.y = verticalVelocity;
-
         controller.Move(moveDirection * Time.deltaTime);
+
+        float currentSpeed = new Vector3(controller.velocity.x, 0, controller.velocity.z).magnitude;
+        animator.SetFloat("Speed", currentSpeed);
+        Debug.Log("Speed: " + currentSpeed);
     }
 }
