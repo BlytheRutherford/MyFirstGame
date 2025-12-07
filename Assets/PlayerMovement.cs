@@ -34,6 +34,5 @@ public class PlayerMovement : MonoBehaviour
 
         float currentSpeed = new Vector3(controller.velocity.x, 0, controller.velocity.z).magnitude;
         animator.SetFloat("Speed", currentSpeed);
-        Debug.Log("Speed: " + currentSpeed);
     }
 }
